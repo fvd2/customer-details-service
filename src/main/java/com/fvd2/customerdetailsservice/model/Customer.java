@@ -3,11 +3,15 @@ package com.fvd2.customerdetailsservice.model;
 import org.springframework.data.annotation.Id;
 
 import javax.validation.Valid;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
 public class Customer {
     @Id
-    private String id;
+    @Email
+    private String email;
+    // Copies contactDetails.getEmail() to ensure only unique customers are added
+    // TODO: include setter if PATCH method ever implemented for ContactDetails -> Email
 
     @NotBlank
     private String firstName;
@@ -27,12 +31,17 @@ public class Customer {
     private Quote quote;
 
     public Customer(String firstName, String lastName, Address address, PaymentDetails paymentDetails, ContactDetails contactDetails) {
+        this.email = contactDetails.getEmail();
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
         this.paymentDetails = paymentDetails;
         this.contactDetails = contactDetails;
         this.quote = new Quote();
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getFirstName() {
@@ -82,4 +91,5 @@ public class Customer {
     public void setQuote(Quote quote) {
         this.quote = quote;
     }
+
 }
