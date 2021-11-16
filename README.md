@@ -21,7 +21,6 @@ Basic API for storing and retrieving customer information. Written in Java and u
 ### Even better if: main ideas for additions and further improvements
 * Add unit and integration tests for existing functionality
 * Limit access to authenticated users
-* Allow only for unique customers (e.g. using the email field)
 * ...
 
 
