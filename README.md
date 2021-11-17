@@ -62,7 +62,8 @@ docker run -p 8080:8080 fvd2/customer-details-service
 
 ### Even better if: main ideas for additions and further improvements
 * Add unit and integration tests for existing functionality
-* Improve error handling, e.g. provide specific feedback on invalid input(s)
+* Add filtering, sorting and pagination to GET /customers/ endpoint
+* Improve error handling, e.g. provide more specific feedback on invalid input(s)
 * Limit access to authenticated users
 * ...
 
