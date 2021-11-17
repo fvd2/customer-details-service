@@ -19,6 +19,7 @@ Basic API for storing and retrieving customer information. Written in Java and u
 
 #### POST /v1/customers/
 * Adds a customer to the database
+* Bonus: validates input data (see example below)
 
 * Example customer and validation rules:
 ```
@@ -46,6 +47,7 @@ Basic API for storing and retrieving customer information. Written in Java and u
 
 ### Even better if: main ideas for additions and further improvements
 * Add unit and integration tests for existing functionality
+* Improve error handling, e.g. provide specific feedback on invalid input(s)
 * Limit access to authenticated users
 * ...
 
