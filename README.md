@@ -3,6 +3,21 @@ Basic API for storing and retrieving customer information. Written in Java and u
 
 [Live API](https://freekvandam.nl/customer-details-service/v1/customers)
 
+### How to run
+1. Clone repo and create package
+```
+git clone https://github.com/fvd2/customer-details-service && cd customer-details-service
+./mvnw package && java -jar target/gs-spring-boot-docker-0.1.0.jar
+```
+
+2. Populate MONGODB_URI environment variable in Dockerfile
+
+3. Build and run docker container
+```
+docker build -t fvd2/customer-details-service .
+docker run -p 8080:8080 fvd2/customer-details-service
+```
+
 ### Requirements
 1. Store a customer with the following (required) data points
    * First name
