@@ -30,10 +30,11 @@ public class CustomerService {
             if (quoteResponse != null) {
                 customer.setQuote(quoteResponse.getQuoteResponseContent().getQuoteList().get(0));
             }
-        } catch(Error err) {
-            System.out.println("Could not pull and set quote: " + err);
+            return customerRepository.insert(customer);
         }
-        return customerRepository.insert(customer);
+        catch (Exception err) {
+            return customerRepository.insert(customer);
+        }
     }
 
     public QuoteResponseContent addQuote(QuoteResponse contents) {
