@@ -42,7 +42,7 @@ Basic API for storing and retrieving customer information. Written in Java and u
 		"creditCardExpirationDate": "12/22" // in MM/YY format and in future
 	}
 }
-
+```
 ### Even better if: main ideas for additions and further improvements
 * Add unit and integration tests for existing functionality
 * Limit access to authenticated users
